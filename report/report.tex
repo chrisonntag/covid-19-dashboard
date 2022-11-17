@@ -1,0 +1,96 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,left=2.5cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{amsmath, mathpazo}
+
+\usepackage[pdfauthor={Christoph Sonntag},
+            pdftitle={Christoph Sonntag's Assignment 1},
+            pdfkeywords={}]{hyperref}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks = true,
+  allcolors  = .,
+}
+
+\usepackage[author={Christoph Sonntag}]{pdfcomment}
+\newcommand{\note}[1]{\pdfcomment{#1}}
+
+\usepackage{enumitem}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+
+\title{Low-Fidelity Design -- Covid-19 Dashboard Implementation\\ \small{VIS, A5}}
+\author{Christoph Sonntag}
+
+
+\begin{document}
+\maketitle
+\pagenumbering{arabic}
+
+
+\section{Motivation}
+The main goal of this project was to design a dashboard showcasing COVID-19 data, that could be useful for a
+Public Health Expert in an international COVID-19 task force group, possibly working for an international organization,
+an university or for another similar entity as well as useful for a
+Government Official who wants to concentrate more on country specific variables and the correlations and effects of those.
+
+These two user types may be interested in the same overall topic, however, each of the two is interested in
+different deviations of the data.
+The difficulty in this task is therefore to bring together these different objectives
+in one design.
+
+
+\section{Prototyping / Design Process}
+During the design of complex visualizations or simply because a lot of different features are used, there is always
+the risk of overloading graphics with too much information.
+
+Therefore, the basic idea behind my design was to present the user with as much information as possible while giving him only as much freedom as necessary in the composition of the features.
+In my first draft there was therefore one more diagram in my dashboard (histogram), which I then did not include in the final submission in favor of usability.
+As mentioned in the draft paper, the world map was going to be the main feature in my final design because it would give both the Public Health Expert and the Government Official enough room of their own to explore different areas of the world by zooming and panning the map.
+Unfortunately, another feature that was originally very important to me, which is also based on the world map, I had to remove during prototyping as well.
+The idea was that the user could add another dimension to the world map, in addition to the information encoded in color, by changing the topology of the map. On this cartogram, variables such as population density could thus be projected onto the actual size of a country on the map, for example.
+Both in implementation and after a user study I conducted among friends, this idea turned out to be neither practical nor purposeful for the user types mentioned above.
+
+\section{Implementation Details}
+My final design therefore reflects a more visually minimalist version of my planning, but I think it pays off in use.
+The project is based solely on vue.js and d3.js and uses the Bulma-based buefy as CSS frontend, which is characterized by easy-to-use components.
+
+\section{Discussion}
+For the next project, I would either definitely spend more time on the implementation of special details, or consider during planning whether
+costs (in the temporal sense) and benefits of the planned feature are at all in relation.
+
+\section{Conclusion}
+To summarize, I still believe that at least a few people who fall under the user types described above can get some benefit from my COVID-19 dashboard.
+It is clear and versatile at the same time due to the centered large map and the many setting options.
+
+
+\end{document}
+
