@@ -1,4 +1,4 @@
-# Interactive graphics – A3 submission sonntagc25
+# COVID-19 Visual Data Analysis Dashboard
 
 This project tries to display the correlation between the average yearly income per U.S. state and the 
 corresponding ratio of educational attainment (Bachelor's degree or higher). At first, I used a red and blue 
@@ -7,6 +7,8 @@ green is known for as a much more positive color. In addition to that, the color
 for people with protanopia, deuteranopia, or tritanopia.
 
 ![Generated with https://davidmathlogic.com/colorblind/](colorpalette.png "Used color palette as a perso with protanopia, deuteranopia, or tritanopia would see them.")
+
+This project also uses data from the "Our World in Data" project. Make sure to load the [respective .csv](https://github.com/owid/covid-19-data/blob/master/public/data/owid-covid-data.csv) file in the public folder.
 
 ## Project setup
 Yarn has been chosen as a package manager.
